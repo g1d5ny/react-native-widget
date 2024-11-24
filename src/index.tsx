@@ -6,8 +6,8 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-const WidgetLibrary = NativeModules.WidgetLibrary
-  ? NativeModules.WidgetLibrary
+const RNWidget = NativeModules.RNWidget
+  ? NativeModules.RNWidget
   : new Proxy(
       {},
       {
@@ -18,5 +18,5 @@ const WidgetLibrary = NativeModules.WidgetLibrary
     );
 
 export function multiply(a: number, b: number): Promise<number> {
-  return WidgetLibrary.multiply(a, b);
+  return RNWidget.multiply(a, b);
 }

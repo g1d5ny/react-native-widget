@@ -1,6 +1,6 @@
 //
 //  File.swift
-//  WidgetLibraryExample
+//  RNWidgetExample
 //
 
 import Foundation

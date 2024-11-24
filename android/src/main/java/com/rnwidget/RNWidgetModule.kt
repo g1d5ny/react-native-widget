@@ -1,11 +1,11 @@
-package com.widget
+package com.rnwidget
 
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.Promise
 
-class WidgetLibraryModule(reactContext: ReactApplicationContext) :
+class RNWidgetModule(reactContext: ReactApplicationContext) :
   ReactContextBaseJavaModule(reactContext) {
 
   override fun getName(): String {
@@ -20,6 +20,6 @@ class WidgetLibraryModule(reactContext: ReactApplicationContext) :
   }
 
   companion object {
-    const val NAME = "WidgetLibrary"
+    const val NAME = "RNWidget"
   }
 }

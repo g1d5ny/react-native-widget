@@ -1,4 +1,4 @@
-package widget.example
+package rnwidget.example
 
 import android.app.Application
 import com.facebook.react.PackageList
