@@ -20,3 +20,23 @@ const RNWidget = NativeModules.RNWidget
 export function multiply(a: number, b: number): Promise<number> {
   return RNWidget.multiply(a, b);
 }
+
+export function plus(a: number, b: number): Promise<number> {
+  return RNWidget.plus(a, b);
+}
+
+export function getSystemVersion() {
+  return RNWidget.getSystemVersion();
+}
+
+export function setTextToWidget(time: string) {
+  return RNWidget.setTextToWidget(time)
+    .then((response: any) => {
+      console.log('Time sent to widget successfully:', time, response);
+      return response;
+    })
+    .catch((error: any) => {
+      console.error('Failed to send time to widget:', error);
+      throw error;
+    });
+}

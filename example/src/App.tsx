@@ -1,17 +1,26 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-widget';
+import { setTextToWidget } from 'react-native-widget';
+
+const sendTimeToWidget = (text: string) => {
+  setTextToWidget(text)
+    .then(() => {
+      console.log('Time successfully sent to widget');
+    })
+    .catch((error: any) => {
+      console.error('Failed to send time to widget:', error);
+    });
+};
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
-
+  const text = '지어니스트';
   useEffect(() => {
-    multiply(3, 7).then(setResult);
+    sendTimeToWidget(text);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>text: {text}</Text>
     </View>
   );
 }
