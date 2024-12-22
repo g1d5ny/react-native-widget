@@ -15,8 +15,7 @@ class RNWidget: NSObject {
       let userDefaults = UserDefaults(suiteName: "group.com.example.rnwidget")
       userDefaults?.set(text, forKey: "currentText")
       WidgetCenter.shared.reloadTimelines(ofKind: "WidgetExample")
-      resolve("success")
+      resolver("success")
+      rejecter("error")
   }
-
-
 }

@@ -16,7 +16,7 @@ open class TextWidgetProvider : AppWidgetProvider() {
 
         for (appWidgetId in appWidgetIds) {
             val views = RemoteViews(context.packageName, R.layout.text_widget_layout)
-            views.setTextViewText(R.id.timeText, currentText)
+            views.setTextViewText(R.id.text, currentText)
             appWidgetManager.updateAppWidget(appWidgetId, views)
         }
     }

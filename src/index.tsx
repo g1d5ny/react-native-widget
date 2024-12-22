@@ -29,14 +29,12 @@ export function getSystemVersion() {
   return RNWidget.getSystemVersion();
 }
 
-export function setTextToWidget(time: string) {
-  return RNWidget.setTextToWidget(time)
+export function setTextToWidget(text: string) {
+  return RNWidget.setTextToWidget(text)
     .then((response: any) => {
-      console.log('Time sent to widget successfully:', time, response);
       return response;
     })
     .catch((error: any) => {
-      console.error('Failed to send time to widget:', error);
       throw error;
     });
 }
