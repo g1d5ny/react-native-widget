@@ -48,5 +48,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>AppGroupIdentifier</key>
+	<string>group.com.example.rnwidget</string>
 </dict>
 </plist>

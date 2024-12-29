@@ -5,10 +5,10 @@ import { setTextToWidget } from 'react-native-widget';
 const sendTimeToWidget = (text: string) => {
   setTextToWidget(text)
     .then(() => {
-      console.log('Time successfully sent to widget');
+      console.log('Text successfully sent to widget');
     })
     .catch((error: any) => {
-      console.error('Failed to send time to widget:', error);
+      console.error('Failed to send text to widget:', error);
     });
 };
 

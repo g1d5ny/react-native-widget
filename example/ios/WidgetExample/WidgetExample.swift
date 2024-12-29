@@ -50,7 +50,7 @@ struct WidgetExample: Widget {
             WidgetExampleEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
         }
-        .configurationDisplayName("Simple Text Widget")
+        .configurationDisplayName("Simple Widget")
         .description("This widget displays a simple text from UserDefaults.")
     }
 }

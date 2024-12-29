@@ -26,12 +26,7 @@ class RNWidgetModule(reactContext: ReactApplicationContext) :
     editor.putString(key, value)
     editor.apply()
   }
-
-  private fun getFromSharedPreferences(context: Context, key: String): String? {
-    val sharedPreferences: SharedPreferences = context.getSharedPreferences("com.widgetexample", Context.MODE_PRIVATE)
-    return sharedPreferences.getString(key, null)
-  }
-
+  
   @ReactMethod
   fun setTextToWidget(text: String, promise: Promise) {
     try {
